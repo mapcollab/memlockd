@@ -2,7 +2,7 @@
 Description=memlockd
 
 [Service]
-ExecStart=/usr/sbin/memlockd -f -u memlockd
+ExecStart=/usr/sbin/memlockd -f
 ExecReload=/bin/kill -HUP $MAINPID
 Type=simple
 StandardOutput=syslog

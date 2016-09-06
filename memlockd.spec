@@ -30,8 +30,9 @@ make
 mkdir -p %{buildroot}/%{_unitdir}
 mkdir -p %{buildroot}/%{_sbindir}
 mkdir -p %{buildroot}/%{_sysconfdir}
-install -m755 memlockd         %{buildroot}/%{_sbindir}/
-install -m644 memlockd.service %{buildroot}/%{_unitdir}/
+mkdir -p %{buildroot}/%{_sysconfdir}/memlockd.d
+install -m755 memlockd         %{buildroot}/%{_sbindir}
+install -m644 memlockd.service %{buildroot}/%{_unitdir}
 install -m644 memlockd.cfg     %{buildroot}/%{_sysconfdir}
 
 %post
@@ -44,8 +45,8 @@ install -m644 memlockd.cfg     %{buildroot}/%{_sysconfdir}
 %systemd_postun_with_restart memlockd.service
 
 %files
-%attr(0755,root,root) %{_sbindir}/*
-%attr(0644,root,root) %{_unitdir}/*
-%attr(0644,root,root) %{_sysconfdir}/*
+%attr(0755,root,root) %{_sbindir}
+%attr(0644,root,root) %{_unitdir}
+%attr(0644,root,root) %{_sysconfdir}
 
 %changelog

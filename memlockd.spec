@@ -50,3 +50,6 @@ install -m644 memlockd.cfg     %{buildroot}/%{_sysconfdir}
 %attr(0644,root,root) %{_sysconfdir}
 
 %changelog
+* Wed Sep 07 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 1.1-1
+- new package built with tito
+

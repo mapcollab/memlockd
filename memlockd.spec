@@ -45,9 +45,9 @@ install -m644 memlockd.cfg     %{buildroot}/%{_sysconfdir}
 %systemd_postun_with_restart memlockd.service
 
 %files
-%attr(0755,root,root) %{_sbindir}
-%attr(0644,root,root) %{_unitdir}
-%attr(0644,root,root) %{_sysconfdir}
+%attr(0755,root,root) %{_sbindir}/*
+%attr(0644,root,root) %{_unitdir}/*
+%attr(0644,root,root) %{_sysconfdir}/*
 
 %changelog
 * Wed Sep 07 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 1.1-1

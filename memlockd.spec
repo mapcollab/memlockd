@@ -1,7 +1,7 @@
 Summary: Memlockd is a daemon that locks files into memory
 Name: memlockd
 Version: 1.1
-Release: 1
+Release: 2
 Group: System Environment/Daemons
 URL: https://doc.coker.com.au/projects/memlockd/
 Vendor: Russell Coker
@@ -50,6 +50,10 @@ install -m644 memlockd.cfg     %{buildroot}/%{_sysconfdir}
 %attr(0644,root,root) %{_sysconfdir}/*
 
 %changelog
+* Fri Sep 09 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 1.1-2
+- spec: fix %%files to avoid conflicts with outher packages
+  (michal.gawlik@thalesgroup.com)
+
 * Wed Sep 07 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 1.1-1
 - new package built with tito
 
